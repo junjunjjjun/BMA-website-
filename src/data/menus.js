@@ -4,11 +4,11 @@ export const menuMain = [
     url: "/",
   },
   {
-    name: "Designs",
-    url: "/designs",
+    name: "Classes",
+    url: "/classes",
   },
   {
-    name: "Book Now",
+    name: "Join Us",
     url: "/contact",
   },
 ];
