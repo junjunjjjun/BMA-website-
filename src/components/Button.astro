@@ -1,0 +1,14 @@
+---
+const { color = "teal", url = "", newtab = false, As = "a", ...props } = Astro.props;
+---
+
+<As
+	class={`not-prose button button-${color} hover:brightness-110 transition duration-300 ease-in-out`}
+
+	href={url}
+	target={newtab ? "_blank" : "_self"}
+	rel={newtab ? "noopener noreferrer" : ""}
+	{...props}
+>
+	<slot />
+</As>
