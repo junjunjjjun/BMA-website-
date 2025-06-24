@@ -3,39 +3,52 @@ import Layout from "~/layouts/Layout.astro";
 import Section from "~/components/Section.astro";
 import Container from "~/components/Container.astro";
 import Button from "~/components/Button.astro";
-import { Image } from "astro:assets";
-
-import HomeImage from "~/assets/images/homeimage.png";
 ---
 
-<Layout title="Home" pageTitle="Home" description="Welcome to Las Piñero Tattoo Studio">
-  <div class="h-screen flex flex-col overflow-hidden">
-    <Section class:list="relative flex-1 overflow-hidden">
-      <Image
-        src={HomeImage}
-        alt="Tattoo background"
-        class:list="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
-      />
-      <Container class:list="relative z-10 h-full flex items-center justify-start pl-12">
-        <div class="text-left text-white max-w-2xl">
-          <h1 class="text-5xl lg:text-7xl font-bold font-['Times New Roman'] leading-tight mb-4 drop-shadow-[0_0_12px_rgba(255,255,255,0.75)]">
-            Las Piñero<br />Tattoo Studio
-          </h1>
-          <span class="text-white/90 text-xl drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]">
-            Tattoo Studio — Las Piñas
-          </span>
-          <p class="text-lg lg:text-xl mt-4 text-white/70">
-            Experience the art of ink with timeless style.
-          </p>
-          <div class="not-prose mt-8">
-            <Button url="#chatbot" color="white">Ask Questions!</Button>
-          </div>
-        </div>
-      </Container>
-    </Section>
-  </div>
+<Layout title="Home" pageTitle="WKB Gym">
+  <!-- Hero (60vh tall) -->
+  <Section class="relative h-[60vh] w-full overflow-hidden">
+    <!-- looping GIF/video from public/media -->
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      class="absolute inset-0 w-full h-full object-cover"
+    >
+      <source src="/media/dojo-hero.gif" type="image/gif" />
+      <!-- or if you uploaded an MP4:
+      <source src="/media/dojo-hero.mp4" type="video/mp4" />
+      -->
+    </video>
+
+    <!-- Hero Content -->
+    <Container class="relative z-10 flex flex-col items-center justify-center text-white h-full">
+      <h1 class="text-5xl sm:text-6xl font-bold drop-shadow-[0_0_12px_rgba(0,0,0,0.75)]">
+        WKB Gym
+      </h1>
+      <p class="mt-2 text-lg sm:text-xl drop-shadow-[0_0_20px_rgba(0,0,0,0.75)]">
+        Kyokushin Karate / Kickboxing / MMA
+      </p>
+      <Button url="/joinus" color="white" class="mt-6">
+        Book a Trial Class
+      </Button>
+    </Container>
+  </Section>
+
+  <!-- About the Gym -->
+  <Section class="bg-[rgba(248,245,237,1)] py-16">
+    <Container>
+      <h2 class="text-2xl font-bold mb-4">About the Gym</h2>
+      <p class="mb-2">
+        We train teenagers and adults in MMA, Kickboxing, and Kyokushin Karate. Our coach is experienced and battle-tested.
+        Whether you’re new or seasoned, this is where discipline meets strength.
+      </p>
+      <p class="font-medium">
+        📍 The One Oasis Gym, 3rd floor, BF Homes
+      </p>
+    </Container>
+  </Section>
+
+  <!-- (Add more <Section> blocks here: schedule, testimonials, footer, etc.) -->
 </Layout>
-
-
-
-
