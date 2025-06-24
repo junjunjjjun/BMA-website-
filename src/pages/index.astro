@@ -1,14 +1,16 @@
 ---
-import Layout   from "~/layouts/Layout.astro";
-import Section  from "~/components/Section.astro";
-import Container from "~/components/Container.astro";
-import Button   from "~/components/Button.astro";
+import Layout     from "~/layouts/Layout.astro";
+import Section    from "~/components/Section.astro";
+import Container  from "~/components/Container.astro";
+import Button     from "~/components/Button.astro";
+// Import your MP4 so Vite will bundle & serve it
+import DojoVideo  from "~/assets/media/dojo.mp4";
 ---
 
 <Layout title="Home" pageTitle="WKB Gym">
   <!-- Hero (60vh tall) -->
   <Section class="relative h-[60vh] w-full overflow-hidden">
-    <!-- looping MP4 from public/media -->
+    <!-- looping MP4 imported from src/assets/media -->
     <video
       autoplay
       muted
@@ -16,7 +18,7 @@ import Button   from "~/components/Button.astro";
       playsinline
       class="absolute inset-0 w-full h-full object-cover"
     >
-      <source src="/media/dojo.mp4" type="video/mp4" />
+      <source src={DojoVideo} type="video/mp4" />
     </video>
 
     <!-- Hero Content -->
