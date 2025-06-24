@@ -1,0 +1,39 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import Section from "~/components/Section.astro";
+import Container from "~/components/Container.astro";
+import Heading from "~/components/Heading.astro";
+import FormContact from "~/components/forms/FormContact.astro";
+import Map from "~/components/Map.astro";
+import TableHours from "~/components/TableHours.astro";
+import Address from "~/components/Address.astro";
+---
+
+<Layout title="Join Us" pageTitle="Join Us / Contact">
+  <Section>
+    <Container class="bg-white text-black font-['Times New Roman'] rounded-lg p-8">
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 xl:gap-16">
+        
+        <!-- Left column: form -->
+        <div>
+          <Heading>
+            <h2 slot="heading-title" class="h2">Join Us</h2>
+            <p slot="heading-content">Book Your Trial Class</p>
+          </Heading>
+          <FormContact />
+        </div>
+        
+        <!-- Right column: location & hours -->
+        <div>
+          <Heading>
+            <h2 slot="heading-title" class="h2">Location &amp; Hours</h2>
+          </Heading>
+          <Address />
+          <TableHours />
+          <Map />
+        </div>
+
+      </div>
+    </Container>
+  </Section>
+</Layout>
