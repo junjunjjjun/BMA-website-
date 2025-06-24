@@ -9,6 +9,6 @@ export const menuMain = [
   },
   {
     name: "Join Us",
-    url: "/contact",
+    url: "/joinus",
   },
 ];
