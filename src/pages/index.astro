@@ -1,14 +1,14 @@
 ---
-import Layout from "~/layouts/Layout.astro";
-import Section from "~/components/Section.astro";
+import Layout   from "~/layouts/Layout.astro";
+import Section  from "~/components/Section.astro";
 import Container from "~/components/Container.astro";
-import Button from "~/components/Button.astro";
+import Button   from "~/components/Button.astro";
 ---
 
 <Layout title="Home" pageTitle="WKB Gym">
   <!-- Hero (60vh tall) -->
   <Section class="relative h-[60vh] w-full overflow-hidden">
-    <!-- looping GIF/video from public/media -->
+    <!-- looping MP4 from public/media -->
     <video
       autoplay
       muted
@@ -16,10 +16,7 @@ import Button from "~/components/Button.astro";
       playsinline
       class="absolute inset-0 w-full h-full object-cover"
     >
-      <source src="/media/dojo-hero.gif" type="image/gif" />
-      <!-- or if you uploaded an MP4:
-      <source src="/media/dojo-hero.mp4" type="video/mp4" />
-      -->
+      <source src="/media/dojo.mp4" type="video/mp4" />
     </video>
 
     <!-- Hero Content -->
@@ -41,8 +38,9 @@ import Button from "~/components/Button.astro";
     <Container>
       <h2 class="text-2xl font-bold mb-4">About the Gym</h2>
       <p class="mb-2">
-        We train teenagers and adults in MMA, Kickboxing, and Kyokushin Karate. Our coach is experienced and battle-tested.
-        Whether you’re new or seasoned, this is where discipline meets strength.
+        We train teenagers and adults in MMA, Kickboxing, and Kyokushin Karate.
+        Our coach is experienced and battle-tested. Whether you’re new or seasoned,
+        this is where discipline meets strength.
       </p>
       <p class="font-medium">
         📍 The One Oasis Gym, 3rd floor, BF Homes
@@ -50,5 +48,5 @@ import Button from "~/components/Button.astro";
     </Container>
   </Section>
 
-  <!-- (Add more <Section> blocks here: schedule, testimonials, footer, etc.) -->
+  <!-- Add more sections here as needed -->
 </Layout>
