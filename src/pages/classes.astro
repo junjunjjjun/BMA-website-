@@ -6,8 +6,8 @@ import Container from "~/components/Container.astro";
 
 <Layout title="Classes" pageTitle="Our Classes">
 
-  <!-- Hero (only as tall as its content) -->
-  <Section class="bg-black font-['Times New Roman'] text-white py-12">
+  <!-- Fixed Hero: top 50vh locked in place -->
+  <Section class="fixed top-0 left-0 w-full h-[50vh] bg-black font-['Times New Roman'] text-white flex items-center justify-center z-20">
     <Container class="text-center">
       <h1 class="text-5xl sm:text-6xl font-bold drop-shadow-[0_0_12px_rgba(255,255,255,0.75)]">
         Our Classes
@@ -18,15 +18,16 @@ import Container from "~/components/Container.astro";
     </Container>
   </Section>
 
+  <!-- Spacer equal to hero height so content sits below -->
+  <div class="h-[50vh]"></div>
+
   <!-- Weekly Class Schedule -->
   <Section class="bg-white py-16">
     <Container>
       <h2 class="text-3xl font-bold text-center mb-8">Weekly Class Schedule</h2>
-
-      <!-- horizontally scrollable if viewport too narrow -->
       <div class="overflow-x-auto">
         <div class="min-w-max grid grid-cols-7 gap-6">
-          
+
           <!-- Sunday -->
           <div>
             <h3 class="whitespace-nowrap font-semibold mb-4 text-center">Sunday</h3>
